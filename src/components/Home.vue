@@ -42,6 +42,10 @@ export default {
 			} else {
 				this.errorMessage = true;
 			}
+		}).catch(reason => {
+			this.wait         = false;
+			this.errorMessage = true;
+			console.log(reason);
 		});
 	}
 }

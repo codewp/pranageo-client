@@ -16,14 +16,13 @@ export function fetchItems() {
     return new Promise(
         (resolve, reject) => {
             Vue.http.get('http://localhost:8081/items').then(response => {
-                // resolve(response.body.items);
                 if (null != response.body.items) {
                     resolve(response.body.items);
                 } else {
-                    reject(false);
+                    reject('items is empty!');
                 }
             }, response => {
-                reject(false);
+                reject('Error occurred in request to Rest Api.');
             });
         }
     );
