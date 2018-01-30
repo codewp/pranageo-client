@@ -5,6 +5,13 @@ Vue.use( VueResource )
 Vue.http.options.emulateJSON = true
 Vue.http.options.emulateHTTP = true
 
+/**
+ * Fetch items from RestApi.
+ *
+ * @since  1.0.0
+ *
+ * @return Promise
+ */
 export function fetchItems() {
     return new Promise(
         (resolve, reject) => {
