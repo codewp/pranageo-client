@@ -15,7 +15,7 @@ Vue.http.options.emulateHTTP = true
 export function fetchItems() {
     return new Promise(
         (resolve, reject) => {
-            Vue.http.get('http://localhost:8081/items').then(response => {
+            Vue.http.get('http://13.95.174.20:8080/items').then(response => {
                 if (null != response.body.items) {
                     resolve(response.body.items);
                 } else {
